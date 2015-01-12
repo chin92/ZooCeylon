@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="We'll help you find your friend just by typing in his/her mobile phone number. So get Started! "
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textIsSelectable="false"
+        android:textStyle="italic"
+        android:textSize="23dp"
+        android:layout_margin="25dp"
+        android:textColor="#ff47755e" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:maxLength="10"
+        android:id="@+id/txt_fr_findFriend_number"
+        android:hint="Enter Number (eg- 0XXXXXXXXX)"
+        android:layout_above="@+id/btn_fr_friendFinder"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Friend"
+        android:id="@+id/btn_fr_friendFinder"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_friend_friendfinder"
+        android:layout_below="@+id/textView4"
+        android:layout_above="@+id/txt_fr_findFriend_number" />
+</RelativeLayout><!-- From: file:/C:/Users/Chinthana/Desktop/INTEGRATED/ZooCeylon2_backup/app/src/main/res/layout/frg_friends_findfriend.xml -->
