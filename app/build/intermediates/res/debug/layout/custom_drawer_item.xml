@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- This linear layout is to design the rectangle which is outside and individual item  -->
+
+
+
+        <!-- This part handles an individual item in the item drawer -->
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:background="#44755e"
+
+            >
+
+            <!-- imageView holds the image for the drawer item -->
+
+            <ImageView
+                android:id="@+id/drawer_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- textView holds the Text for the drawer item -->
+
+            <TextView
+                android:id="@+id/drawer_itemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello Text"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <!--This part handles the appearance of the divider between the drawer items-->
+
+
+
+</RelativeLayout><!-- From: file:/C:/Users/Chinthana/Desktop/INTEGRATED/ZooCeylon2_backup/app/src/main/res/layout/custom_drawer_item.xml -->

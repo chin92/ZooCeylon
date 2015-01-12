@@ -1,0 +1,164 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The main content view -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <!-- Add content here -->
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:text="Details of Today Event"
+                android:layout_marginTop="14dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parrot Show"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textSize="20sp"
+                android:layout_below="@+id/text1"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="150dp"
+                android:id="@+id/img1"
+                android:layout_marginTop="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/an3"/>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:id="@+id/lin1"
+                android:layout_below="@+id/img1"
+                android:layout_alignLeft="@+id/text1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Time          :"
+                    android:id="@+id/textView4"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Location   : "
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/textView5"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Description :"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/textView6"
+                    android:layout_marginTop="5dp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:id="@+id/lin3"
+                android:layout_below="@+id/img1"
+                android:layout_toRightOf="@+id/lin1"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="-20dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Not Available"
+                    android:id="@+id/textView7"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Not Available "
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/textView8"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Not Available"
+                    android:layout_marginLeft="15dp"
+                    android:id="@+id/textView9"
+                    android:layout_marginTop="5dp"/>
+
+
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentLeft="true">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Get the Notification before 1 hours"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="18dp"
+                    android:id="@+id/chk_today"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See the Location of the Event"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:textSize="18dp"
+                    android:clickable="true"/>
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </FrameLayout>
+</android.support.v4.widget.DrawerLayout><!-- From: file:/C:/Users/Chinthana/Desktop/INTEGRATED/ZooCeylon2_backup/app/src/main/res/layout/today_sub.xml -->
