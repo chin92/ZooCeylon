@@ -29,11 +29,8 @@ local.properties
 .buildpath
 
 # Android Studio
-.idea
-# generated files
-bin/
-gen/
-.idea/workspace.xml 
+
+
 .gradle
 build/
 
