@@ -27,9 +27,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.android.ZooCeylon" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ea3fe4d-086a-4a1b-a169-5b53d08de6da" name="Default" comment="News individual list item click partially implemented">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-    </list>
+    <list default="true" id="1ea3fe4d-086a-4a1b-a169-5b53d08de6da" name="Default" comment="News individual list item click partially implemented" />
     <ignored path="ZooCeylon.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
