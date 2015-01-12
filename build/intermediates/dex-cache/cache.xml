@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\classes-4e96651b15a50dc9f25890c52f46e5aeca2d8edf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-164ffe072832cb0256160d6d478ec95f49c31f2e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Chinthana\AppData\Local\Android\android-sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-2f20e96b041b7d05e74ca7a482b95d02515a39f5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\6.5.87\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="dd9247ea0fabe8ee479638c4b4a23e93752be256">
+        <dex dex="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\classes-f3b59486edaadc972c11dc138a82f963be3975ee.jar" />
+    </item>
+    <item
+        jar="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-ac0b142cda372c4a73498f10ff3fdfe59b71b3e2.jar" />
+    </item>
+    <item
+        jar="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\classes-a40a74873fff1596d35902170d1f3d2969ce67cb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\classes-53c7d921cc2a75cbc468437725642b3655753950.jar" />
+    </item>
+    <item
+        jar="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\Libraries\volley.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="d4aaa36e04ee71a83444f8367c97a46fda662d2c">
+        <dex dex="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\volley-6a16e65ad13be22c489271540ee518d1cea88038.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zoo Ceylon</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open"> Open Drawer </string>
+    <string name="drawer_close"> Close Drawer </string>
+
+    <string name="zoomap">Zoo Map</string>
+    <string name="events">Events</string>
+    <string name="animals">Animals</string>
+    <string name="planvisit">Plan Visit</string>
+    <string name="gallery">Gallery</string>
+    <string name="settings">Settings</string>
+    <string name="share">Share</string>
+    <string name="games">Games</string>
+    <string name="friendfinder">Friend Finder</string>
+    <string name="newsfeed">News Feed</string>
+
+
+    <string name="newsContent">The Central Bank has warned that if the oil price stays below $60 a barrel, Russia’s economy will contract by nearly 5 per cent next year. It has been estimated that for every $10 fall in the oil price, Russia’s GDP will be reduced by 2 per cent.
+Meanwhile, western sanctions for Russia’s role in Ukraine have prevented businesses from refinancing their debts in foreign capital markets, leading to currency selling to pay off debts before they become unsustainable.</string>
+
+
+    <!--Animals_Activity_N_See_Zoo_Animal-->
+    <string name="basic_info">Basic Info</string>
+    <string name="check_on_map">Check on map</string>
+    <string name="link_to_gallery">Gallery</string>
+    <string name="see_zoo_animal">See zoo animal</string>
+
+    <!--- text_fields_Main_animal_activity_page -->
+    <string name="description_of_the_animal">The fish can reach an average size of 23 cm in
+        length. The body has an oval shape and is compressed laterally. Like other surgeonfishes,
+        Acanthurus leucosternon swims with its pectoral fins. The caudal fin has a crescent shape.
+        The fish has a "surgeon's scalpel," an erected part of the spine located at the base of the
+        tail. The mouth is small and pointed in a beak-like manner with tiny and sharp teeth for
+        reaching narrow spaces of food. Its sides are blue; its dorsal fin and the base of
+        caudal fin are yellow;
+    </string>
+    <string name="basic_info_of_the_animal">Basic information about the animal will be displayed here</string>
+
+    <!--- text_fields_Main_animal_activity_page_right_side_layout -->
+    <string name="scientific_name">Scientific name</string>
+    <string name="family">Family</string>
+    <string name="lifespan">Lifespan</string>
+    <string name="gestation_period">Gestation period</string>
+    <string name="mass">Mass</string>
+    <string name="height">Height</string>
+    <string name="diet">Diet</string>
+    <string name="habitat">Habitat</string>
+    <string name="status">Status</string>
+    <string name="threats">Threats</string>
+
+    <string name="newsItem1">Hawaii amakihi are one of more than 50 species (over 30 of which are now extinct) of Hawaiian honeycreeper: a family endemic to Hawaii that vary in color, size, beak shape and ecological niche. A complete amakihi genome will help scientists understand honeycreeper evolution better and will aid conservationists in ensuring survival of this and other, more endangered honeycreeper species.</string>
+    <string name="newsItem2">While sequencing a genome is easier than it used to be, it still isn’t a simple matter. SCBI conservation geneticists Taylor Callicrate and Rob Fleischer (with help from collaborators at the National Institutes of Health) worked for months, using several different methods, to fully sequence, assemble and study the amakihi genome. And, like all genomes, there are still parts they don’t fully understand. </string>
+
+    <!--- text_fields_see_zoo_animal -->
+    <string name="description_zoo_animal">Description of the zoo animal will go here</string>
+    <string name="basic_info_zoo_animal">Basic information about the zoo animal will be displayed here</string>
+
+
+</resources>
