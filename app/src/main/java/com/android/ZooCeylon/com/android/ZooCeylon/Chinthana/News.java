@@ -89,7 +89,7 @@ public class News extends Activity {private DrawerLayout mDrawerLayout; // defin
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                     //Intent i=new Intent(News.this,frg_individual_news_item.class);
-
+                    //Test Comment by chinthana
 
 
 
