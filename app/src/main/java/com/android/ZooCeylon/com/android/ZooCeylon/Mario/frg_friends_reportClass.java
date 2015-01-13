@@ -12,7 +12,7 @@ import com.android.ZooCeylon.R;
  * Created by Chinthana on 30/12/2014.
  */
 public class frg_friends_reportClass extends Fragment {
-//testing if Chinthana sucks....
+
     public View frg_report_v;
 
     @Override
