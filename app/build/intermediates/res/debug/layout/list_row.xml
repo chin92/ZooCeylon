@@ -59,7 +59,7 @@
     <!-- Release Year -->
     <TextView
         android:id="@+id/releaseYear"
-        android:text="Test Text"
+        android:text="Released date unavailable"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

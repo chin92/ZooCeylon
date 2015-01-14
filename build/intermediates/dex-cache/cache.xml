@@ -44,6 +44,13 @@
         <dex dex="E:\Zoo Ceylon\BACKUP_zoo_ceylon\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\classes-a40a74873fff1596d35902170d1f3d2969ce67cb.jar" />
     </item>
     <item
+        jar="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\Libraries\picasso-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="f36d2d4e3a36b3259aaf9d004d29b4cdc6c1bfb2">
+        <dex dex="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\pre-dexed\debug\picasso-2.4.0-2d0b05c3494506c50895b9197bff0a83db1c9198.jar" />
+    </item>
+    <item
         jar="C:\Users\Chinthana\Desktop\INTEGRATED\ZooCeylon2_backup\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
         jumboMode="false"
         revision="19.1.0"

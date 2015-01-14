@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.ZooCeylon.Contact;
@@ -56,7 +57,7 @@ public class News extends Activity {private DrawerLayout mDrawerLayout; // defin
     // Movies json url
     private static final String url = "http://chinaman.freeoda.com/newsFeedAll.php";
     private ProgressDialog pDialog;
-    private List<NewsItem> movieList = new ArrayList<NewsItem>();
+    private List<NewsItem> newsItemList = new ArrayList<NewsItem>();
     private ListView listView;
     private CustomListAdapter adapter;
 
@@ -67,11 +68,8 @@ public class News extends Activity {private DrawerLayout mDrawerLayout; // defin
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout_news);
 
-
-        setContentView(R.layout.activity_layout_news);
-
         listView = (ListView) findViewById(R.id.list);
-        adapter = new CustomListAdapter(News.this, movieList);
+        adapter = new CustomListAdapter(News.this, newsItemList);
         listView.setAdapter(adapter);
 
         pDialog = new ProgressDialog(this);
@@ -91,7 +89,19 @@ public class News extends Activity {private DrawerLayout mDrawerLayout; // defin
                     //Intent i=new Intent(News.this,frg_individual_news_item.class);
                     //Test Comment by chinthana
 
+                    String imageUri=((TextView)view.findViewById(R.id.imageURL)).getText().toString();
+                    String newsHeading=((TextView)view.findViewById(R.id.title)).getText().toString();
+                    String newsContent=((TextView)view.findViewById(R.id.content)).getText().toString();
+                    String postedDate=((TextView)view.findViewById(R.id.releaseYear)).getText().toString();
 
+                    Intent i=new Intent(News.this,frg_individual_news_item.class);
+
+                    i.putExtra("IMAGEURI",imageUri);
+                    i.putExtra("NEWSHEADING",newsHeading);
+                    i.putExtra("NEWSCONTENT",newsContent);
+                    i.putExtra("POSTEDDATE",postedDate);
+
+                    startActivity(i);
 
 
 
@@ -129,7 +139,7 @@ public class News extends Activity {private DrawerLayout mDrawerLayout; // defin
 								movie.setGenre(genre);*/
 
                                     // adding movie to movies array
-                                    movieList.add(newsItem);
+                                    newsItemList.add(newsItem);
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -155,7 +165,7 @@ public class News extends Activity {private DrawerLayout mDrawerLayout; // defin
 
         }
         else
-            Toast.makeText(this,"Network is unavailable",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Please enable mobile data to view the content",Toast.LENGTH_SHORT).show();
 
 
 

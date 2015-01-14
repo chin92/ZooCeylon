@@ -64,7 +64,7 @@
         <activity android:name=".com.android.ZooCeylon.Darsha.kids_quiz"/>
         <activity android:name=".com.android.ZooCeylon.Gayathri.Calendar"/>
         <activity android:name=".com.android.ZooCeylon.Gayathri.Today"/>
-        <activity android:name=".com.android.ZooCeylon.Chinthana.singleNewsItem"/>
+        <activity android:name=".com.android.ZooCeylon.Chinthana.frg_individual_news_item"/>
 
     </application>
 

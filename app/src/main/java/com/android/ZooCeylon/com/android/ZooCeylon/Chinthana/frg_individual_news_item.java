@@ -1,12 +1,14 @@
 package com.android.ZooCeylon.com.android.ZooCeylon.Chinthana;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.ZooCeylon.R;
-import com.android.volley.toolbox.NetworkImageView;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by Chinthana on 19/12/2014.
@@ -34,12 +36,33 @@ public class frg_individual_news_item extends Activity
         image= (ImageView) findViewById(R.id.newsImage);
         tv_releaseDate= (TextView) findViewById(R.id.releaseDate);
 
-        NetworkImageView avatar = (NetworkImageView)findViewById(R.id.newsImage);
-        // avatar.setImageUrl("http://someurl.com/image.png",mImageLoader);
+        ImageView avatar = (ImageView)findViewById(R.id.newsImage);
 
-        heading.setText(newsHeading);
-        content.setText(newsContent);
-        tv_releaseDate.setText(releaseDate);
+        Intent intent=getIntent();
+        Bundle bundle=intent.getExtras();
+
+
+
+        heading.setText(bundle.getString("NEWSHEADING"));
+        content.setText(bundle.getString("NEWSCONTENT"));
+        tv_releaseDate.setText(bundle.getString("POSTEDDATE"));
+
+
+
+
+        Picasso.with(this)
+                .load(bundle.getString("IMAGEURI"))
+                .resize(100, 100)
+                .centerCrop()
+                .into(avatar);
+
+
+        avatar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     public void setTv_releaseDate(String releaseDate)

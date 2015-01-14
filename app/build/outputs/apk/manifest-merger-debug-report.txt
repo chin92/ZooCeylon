@@ -163,7 +163,7 @@ activity#com.android.ZooCeylon.com.android.ZooCeylon.Gayathri.Today
 ADDED from AndroidManifest.xml:66:9
 	android:name
 		ADDED from AndroidManifest.xml:66:19
-activity#com.android.ZooCeylon.com.android.ZooCeylon.Chinthana.singleNewsItem
+activity#com.android.ZooCeylon.com.android.ZooCeylon.Chinthana.frg_individual_news_item
 ADDED from AndroidManifest.xml:67:9
 	android:name
 		ADDED from AndroidManifest.xml:67:19
