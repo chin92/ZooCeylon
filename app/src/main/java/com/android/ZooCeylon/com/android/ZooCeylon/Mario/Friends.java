@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -42,9 +43,10 @@ import java.util.List;
 public class Friends extends FragmentActivity {
 
 
+    private static int phkey=00000000;
     private ImageView img;
     private int SELECT_IMAGE=1;
-
+    Toast t;
     //................................................................................//
     private DrawerLayout mDrawerLayout; // defining the drawerLayout
     private ListView mDrawerList;		// defining the listView to add the items in the drawer
@@ -61,6 +63,13 @@ public class Friends extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(phkey==00000000 )
+        {
+            DialogFragment newfrg= new frg_friends_dialogClass();
+            newfrg.show(getSupportFragmentManager(),"friends_dialog");
+
+        }
         setContentView(R.layout.activity_layout_friends); // WHY is this ?
 
         viewPager= (ViewPager) findViewById(R.id.pager_planvisit);
