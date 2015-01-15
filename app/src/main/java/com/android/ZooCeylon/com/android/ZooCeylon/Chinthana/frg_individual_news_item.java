@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.ZooCeylon.R;
@@ -23,8 +24,10 @@ public class frg_individual_news_item extends Activity
 
     TextView heading;
     TextView content;
-    ImageView image;
+    ImageView avatar;
     TextView tv_releaseDate;
+    ProgressBar newsImageProgress;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +36,10 @@ public class frg_individual_news_item extends Activity
 
         heading= (TextView) findViewById(R.id.newsHeading);
         content= (TextView) findViewById(R.id.newsContent);
-        image= (ImageView) findViewById(R.id.newsImage);
+        avatar= (ImageView) findViewById(R.id.newsImage);
         tv_releaseDate= (TextView) findViewById(R.id.releaseDate);
-
-        ImageView avatar = (ImageView)findViewById(R.id.newsImage);
-
         Intent intent=getIntent();
-        Bundle bundle=intent.getExtras();
+        bundle =intent.getExtras();
 
 
 
@@ -48,13 +48,15 @@ public class frg_individual_news_item extends Activity
         tv_releaseDate.setText(bundle.getString("POSTEDDATE"));
 
 
-
-
-        Picasso.with(this)
+        Picasso.with(frg_individual_news_item.this)
                 .load(bundle.getString("IMAGEURI"))
                 .resize(100, 100)
                 .centerCrop()
                 .into(avatar);
+
+
+
+
 
 
         avatar.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +90,8 @@ public class frg_individual_news_item extends Activity
     {
         this.releaseDate=releaseDate;
     }
+
+
 
 
 
