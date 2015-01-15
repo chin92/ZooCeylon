@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:dividerPadding="1dp"
+    android:weightSum="1"
+    android:theme="@android:style/Theme.Holo.Dialog">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Welcome to the Kid Finder! to begin please enter yout mobile phone number"
+        android:id="@+id/txt_fr_dialog"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="1dp"
+        android:layout_margin="1dp"
+        android:layout_weight="0.22" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:hint="Phone number"
+        android:id="@+id/edit_txt_fr_dialog" />
+
+</LinearLayout>
