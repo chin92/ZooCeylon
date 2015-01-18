@@ -1,6 +1,7 @@
 package com.android.ZooCeylon.com.android.ZooCeylon.Mario;
 
-import android.content.Intent;
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -29,6 +30,9 @@ import java.util.List;
 public class frg_friends_reportClass extends Fragment {
     Button b;
     Toast t;
+    // Progress Dialog
+    private ProgressDialog pDialog;
+    JSONParser jsonParser = new JSONParser();
     private String url_host;
     private EditText fname;
     private EditText lname;
@@ -75,66 +79,32 @@ public class frg_friends_reportClass extends Fragment {
             public void onClick(View v) {
 
                 try {
+                    // getting result from radio Buttons
+                    if (rb1.isChecked()) {
+                        gender = "male";
+                    }
+                    if (rb2.isChecked()) {
+                        gender = "female";
+                    }
 
                     String url_host = "http://mariohosted.orgfree.com/database/friends_insert_kidfinder.php";
                     JSONParser jsonParser = new JSONParser();
                     String TAG_SUCCESS = "success";
-
-
-                    t = Toast.makeText(getActivity(),""+fname.getText().toString(),Toast.LENGTH_LONG);
-                    t.show();
-
-
-                    String firstname= fname.getText().toString();
-                    String lastname = lname.getText().toString();
-                    String nickname = nname.getText().toString();
-                    String age=ag.getText().toString();
-                    String gender="male";
-
-                    // getting result from radio Buttons
-                    if(rb1.isChecked())
-                    {
-                        gender="male";
-                    }
-                    else if(rb2.isChecked())
-                    {
-                        gender="female";
-                    }
+                    new InsertToKidFinder().execute();
             /* Testing the fields
             t = Toast.makeText(getApplicationContext(),""+firstname,Toast.LENGTH_LONG);
             t.show();
             */
+                    if(success==1)
+                    {
+                        t=Toast.makeText(getActivity(),"successfully filed a Report",Toast.LENGTH_LONG);
+                        t.show();
 
-                    ///////////////////////////////////////////////////////////
-                    List<NameValuePair> params = new ArrayList<NameValuePair>();
-                    params.add(new BasicNameValuePair("FIRSTNAME", firstname));
-                    params.add(new BasicNameValuePair("LASTNAME", lastname));
-                    params.add(new BasicNameValuePair("NICKNAME",nickname));
-                    params.add(new BasicNameValuePair("AGE",age));
-                    params.add(new BasicNameValuePair("GENDER",gender));
-
-                    JSONObject json = jsonParser.makeHttpRequest(url_host,"POST", params);
-
-                    // check log cat from response
-                    Log.d("Create Response", json.toString());
-
-                    // check for success tag
-
-                    int success = json.getInt(TAG_SUCCESS);
-
-                    if (success == 1) {
-                        // successfully created a user
-                        Intent i = new Intent(getActivity(), frg_friends_reportClass.class);
-                        startActivity(i);
-
-                    } else {
-                        // failed to create user
-                        Log.d("failed updateDB", json.toString());
-                        t = Toast.makeText(getActivity(), "fAILED", Toast.LENGTH_LONG);
+                    }
+                    else{
+                        t=Toast.makeText(getActivity(),"Failed to Report... Try again",Toast.LENGTH_LONG);
                         t.show();
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
                 }
                 catch (Exception e)
                 {
@@ -144,6 +114,74 @@ public class frg_friends_reportClass extends Fragment {
                 }
             }
         });
+
+    }
+    class InsertToKidFinder extends AsyncTask<String, String, Void>
+    {
+        String firstname= fname.getText().toString();
+        String lastname = lname.getText().toString();
+        String nickname = nname.getText().toString();
+        String age=ag.getText().toString();
+
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            pDialog = new ProgressDialog(getActivity());
+            pDialog.setMessage("Sending Request... ");
+            pDialog.setIndeterminate(false);
+            pDialog.setCancelable(true);
+            pDialog.show();
+        }
+
+
+        @Override
+        protected Void doInBackground(String... args) {
+
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("FIRSTNAME", firstname));
+            params.add(new BasicNameValuePair("LASTNAME", lastname));
+            params.add(new BasicNameValuePair("NICKNAME", nickname));
+            params.add(new BasicNameValuePair("AGE", age));
+            params.add(new BasicNameValuePair("GENDER", gender));
+
+            // getting JSON Object
+            // Note that create product url accepts GET method
+            JSONObject json = jsonParser.makeHttpRequest(url_host, "GET", params);
+
+            // check log cat from response
+            Log.d("Insert New Missing person Response...............................................................", json.toString());
+            // check for success tag
+
+            try {
+                //b4_success= json.get(TAG_SUCCESS).toString();
+
+                success = json.getInt(TAG_SUCCESS);
+                Log.d("result of Success...............................................................", String.valueOf(success));
+                //t=Toast.makejText(getActivity(),""+success,Toast.LENGTH_LONG);
+
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+            return null;
+        }
+
+
+        @Override
+        protected void onPostExecute(Void s) {
+            super.onPostExecute(s);
+            //dismiss Dialog once done
+
+            pDialog.dismiss();
+
+            //t=Toast.makeText(getActivity(),"after do :"+success,Toast.LENGTH_LONG);
+        }
+
 
     }
 
