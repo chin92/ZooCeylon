@@ -29,8 +29,20 @@ import java.util.List;
 public class frg_friends_reportClass extends Fragment {
     Button b;
     Toast t;
-//testing if Chinthana suck
+    private String url_host;
+    private EditText fname;
+    private EditText lname;
+    private EditText nname;
+    private EditText ag;
+    private RadioButton rb2;
+    private RadioButton rb1;
     public View frg_report_v;
+    String gender = "male";
+    private String b4_success;
+    private int success;
+    private static final String TAG_SUCCESS="success";
+    android.support.v4.app.Fragment fragment=null;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -46,6 +58,15 @@ public class frg_friends_reportClass extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         b= (Button) getActivity().findViewById(R.id.btn_friend_report);
+        url_host = "http://mariohosted.orgfree.com/database/friends_insert_kidfinder.php";
+
+        //Assigning the radio buttons and Edit Text Fields
+        fname = (EditText) getActivity().findViewById(R.id.txt_fr_report_name);
+        lname = (EditText) getActivity().findViewById(R.id.txt_fr_report_surname);
+        nname = (EditText) getActivity().findViewById(R.id.txt_fr_report_nickName);
+        ag = (EditText) getActivity().findViewById(R.id.txt_fr_report_age);
+        rb1 = (RadioButton) getActivity().findViewById(R.id.radioBtn_fr_report_1);
+        rb2 = (RadioButton) getActivity().findViewById(R.id.radioBtn_fr_report_2);
 
 
 
@@ -54,20 +75,15 @@ public class frg_friends_reportClass extends Fragment {
             public void onClick(View v) {
 
                 try {
+
                     String url_host = "http://mariohosted.orgfree.com/database/friends_insert_kidfinder.php";
                     JSONParser jsonParser = new JSONParser();
                     String TAG_SUCCESS = "success";
 
-                    EditText fname= (EditText) getActivity().findViewById(R.id.txt_fr_report_name);
-                    EditText lname= (EditText) getActivity().findViewById(R.id.txt_fr_report_surname);
-                    EditText nname= (EditText) getActivity().findViewById(R.id.txt_fr_report_nickName);
-                    EditText ag= (EditText) getActivity().findViewById(R.id.txt_fr_report_age);
-                    RadioButton rb1= (RadioButton) getActivity().findViewById(R.id.radioBtn_fr_report_1);
-                    RadioButton rb2= (RadioButton) getActivity().findViewById(R.id.radioBtn_fr_report_2);
-                    /*
+
                     t = Toast.makeText(getActivity(),""+fname.getText().toString(),Toast.LENGTH_LONG);
                     t.show();
-                    */
+
 
                     String firstname= fname.getText().toString();
                     String lastname = lname.getText().toString();
