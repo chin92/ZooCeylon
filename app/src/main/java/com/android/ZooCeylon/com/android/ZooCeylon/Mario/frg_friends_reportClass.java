@@ -61,7 +61,7 @@ public class frg_friends_reportClass extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        b= (Button) getActivity().findViewById(R.id.btn_friend_report);
+        b = (Button) getActivity().findViewById(R.id.btn_friend_report);
         url_host = "http://mariohosted.orgfree.com/database/friends_insert_kidfinder.php";
 
         //Assigning the radio buttons and Edit Text Fields
@@ -73,49 +73,29 @@ public class frg_friends_reportClass extends Fragment {
         rb2 = (RadioButton) getActivity().findViewById(R.id.radioBtn_fr_report_2);
 
 
-
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                try {
-                    // getting result from radio Buttons
-                    if (rb1.isChecked()) {
-                        gender = "male";
-                    }
-                    if (rb2.isChecked()) {
-                        gender = "female";
-                    }
 
-                    String url_host = "http://mariohosted.orgfree.com/database/friends_insert_kidfinder.php";
-                    JSONParser jsonParser = new JSONParser();
-                    String TAG_SUCCESS = "success";
-                    new InsertToKidFinder().execute();
+                // getting result from radio Buttons
+                if (rb1.isChecked()) {
+                    gender = "male";
+                }
+                if (rb2.isChecked()) {
+                    gender = "female";
+                }
+
+
+                new InsertToKidFinder().execute();
             /* Testing the fields
             t = Toast.makeText(getApplicationContext(),""+firstname,Toast.LENGTH_LONG);
             t.show();
             */
-                    if(success==1)
-                    {
-                        t=Toast.makeText(getActivity(),"successfully filed a Report",Toast.LENGTH_LONG);
-                        t.show();
-
-                    }
-                    else{
-                        t=Toast.makeText(getActivity(),"Failed to Report... Try again",Toast.LENGTH_LONG);
-                        t.show();
-                    }
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                    t = Toast.makeText(getActivity(),""+e.getMessage(),Toast.LENGTH_LONG);
-                    t.show();
-                }
             }
         });
-
     }
+
     class InsertToKidFinder extends AsyncTask<String, String, Void>
     {
         String firstname= fname.getText().toString();
@@ -160,14 +140,32 @@ public class frg_friends_reportClass extends Fragment {
                 Log.d("result of Success...............................................................", String.valueOf(success));
                 //t=Toast.makejText(getActivity(),""+success,Toast.LENGTH_LONG);
 
+                if(success==1)
+                {
+                    getActivity().runOnUiThread(new Runnable() {
+                        public void run() {
+
+                            t= Toast.makeText(getActivity(), "Successfully Inserted", Toast.LENGTH_LONG);
+                            t.show();
+                        }
+                    });
+                }
+                else{
+                    getActivity().runOnUiThread(new Runnable() {
+                        public void run() {
+
+                            t= Toast.makeText(getActivity(), "Failed to Report", Toast.LENGTH_LONG);
+                            t.show();
+                        }
+                    });
+
+                }
 
             } catch (JSONException e) {
                 e.printStackTrace();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
             return null;
         }
 
@@ -179,7 +177,6 @@ public class frg_friends_reportClass extends Fragment {
 
             pDialog.dismiss();
 
-            //t=Toast.makeText(getActivity(),"after do :"+success,Toast.LENGTH_LONG);
         }
 
 
