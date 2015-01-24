@@ -1,6 +1,7 @@
 package com.android.ZooCeylon.com.android.ZooCeylon.Mario;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -147,6 +148,9 @@ public class frg_friends_reportClass extends Fragment {
 
                             t= Toast.makeText(getActivity(), "Successfully Inserted", Toast.LENGTH_LONG);
                             t.show();
+                            Intent i = new Intent(getActivity(),frg_friends_reportClass.class);
+                            startActivity(i);
+
                         }
                     });
                 }
