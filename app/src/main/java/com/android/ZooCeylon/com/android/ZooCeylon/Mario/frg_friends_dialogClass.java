@@ -3,11 +3,13 @@ package com.android.ZooCeylon.com.android.ZooCeylon.Mario;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.widget.Toast;
 
+import com.android.ZooCeylon.MainActivity;
 import com.android.ZooCeylon.R;
 
 /**
@@ -38,6 +40,8 @@ public class frg_friends_dialogClass extends DialogFragment {
                     public void onClick(DialogInterface dialog, int id) {
                         frg_friends_dialogClass.this.getDialog().cancel();
 
+                        Intent i= new Intent(getActivity(),MainActivity.class);
+                        startActivity(i);
                     }
                 });
         return builder.create();
